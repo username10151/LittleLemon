@@ -1,0 +1,5 @@
+Starting the Project 
+    -Compose a back-end app 
+    -Use django to serve static HTML content
+    -Commit the project to a Git repository 
+
