@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #Third party packages
+    'rest_framework',
     #local apps
     'reservation',
     'restaurant',
@@ -84,10 +86,10 @@ WSGI_APPLICATION = 'littlelemon.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'reservations',
+        'NAME': 'capstoneDb',
         'HOST': 'localhost',
-        'USER': 'admindjango',
-        'PASSWORD': 'employee@123!',
+        'USER': 'capstoneUser',
+        'PASSWORD': 'mysqlpass123!',
         'PORT': '3306',
     }
 }

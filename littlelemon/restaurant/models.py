@@ -11,3 +11,10 @@ class Bookings(models.Model):
     name = models.CharField(max_length=255)
     numberOfGuests = models.IntegerField()
     bookingDate = models.DateField()
+
+    def __str__(self):
+        return f'{self.name}'
+    
+    class Meta:
+        db_table = 'bookings'
+        verbose_name_plural = 'Bookings'
