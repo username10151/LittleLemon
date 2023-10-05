@@ -1,23 +1,27 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework import status
+from rest_framework import status, viewsets
 from .models import Menu, Bookings
-from .serializers import menuSerializer, bookingsSerializer
+from .serializers import menuSerializer, bookingSerializer
 
 # Create your views here.
 
 def index(request):
     return render(request, 'index.html', {})
 
+class bookingViewSet(viewsets.ModelViewSet):
+    queryset = Bookings.objects.all()
+    serializer_class = bookingSerializer
+
 class bookingView(APIView):
     def get(self, request):
         items = Bookings.objects.all()
-        serializer = bookingsSerializer(items, many=True)
+        serializer = bookingSerializer(items, many=True)
         return Response(serializer.data)
     
     def post(self, request):
-        serializer = bookingsSerializer(data=request.data)
+        serializer = bookingSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response({'status':'success', 'data': serializer.data})
