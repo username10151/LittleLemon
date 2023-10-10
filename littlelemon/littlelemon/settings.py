@@ -44,10 +44,23 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #Third party packages
     'rest_framework',
+    'rest_framework.authtoken',
     #local apps
     'reservation',
     'restaurant',
 ]
+
+#Rest Framework Settings
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+        'rest_framework_xml.renderers.XMLRenderer',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
