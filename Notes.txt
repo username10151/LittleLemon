@@ -3,3 +3,5 @@ Starting the Project
     -Use django to serve static HTML content
     -Commit the project to a Git repository 
 
+Users:
+testuser - test123! - dcaab7fbfe0499f26758a8b61eb449cb3ceafff1

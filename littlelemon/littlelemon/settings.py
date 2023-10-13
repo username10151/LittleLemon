@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     #Third party packages
     'rest_framework',
     'rest_framework.authtoken',
+    'djoser',
     #local apps
     'reservation',
     'restaurant',
@@ -59,8 +60,11 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
     ],
 }
+#Djoser settings
+DJOSER={"USER_ID_FIELD":"username"}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
