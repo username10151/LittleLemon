@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     #local apps
     'reservation',
     'restaurant',
+    'tests',
 ]
 
 #Rest Framework Settings
