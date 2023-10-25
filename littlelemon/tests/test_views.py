@@ -3,8 +3,8 @@ from restaurant.models import Menu
 from restaurant.serializers import menuSerializer
 from rest_framework.test import APIClient
 from django.urls import reverse
-from django.contrib.auth.models import User  # Import the User model
-from rest_framework.authtoken.models import Token  # Import Token mode
+from django.contrib.auth.models import User  
+from rest_framework.authtoken.models import Token 
 
 class MenuViewTest(TestCase):
     def setUp(self):

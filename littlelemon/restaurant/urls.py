@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import menuView, bookingView, SingleMenuItemView
+from .views import bookingView, SingleMenuItemView
 from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
