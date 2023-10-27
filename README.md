@@ -1,5 +1,8 @@
 # littlelemon
 Back-End-Dev-Capstone
+
+If you are reviewing this please read Notes.txt - This will help you with setup!
+
 When # is in url path below it stands for id number (<int:pk>)
 
 /auth - includes all the djsoer libary's paths

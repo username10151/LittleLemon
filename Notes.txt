@@ -1,3 +1,5 @@
+In settings.py replace SECRET_KEY 
+with: SECRET_KEY='django-insecure-9l(c2egwy3b8r!t0@8mfa@^3$3%$9i)80wn3q)hx*$&^$@8vt1'
 
 Users:
 testuser - test123! - dcaab7fbfe0499f26758a8b61eb449cb3ceafff1
