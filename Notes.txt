@@ -1,10 +1,7 @@
-Starting the Project 
-    -Compose a back-end app 
-    -Use django to serve static HTML content
-    -Commit the project to a Git repository 
 
 Users:
 testuser - test123! - dcaab7fbfe0499f26758a8b61eb449cb3ceafff1
+admin - book123!
 
 Views that Did Not Make the Cut But Might Use Later:
     @permission_classes({IsAuthenticated})
@@ -48,3 +45,15 @@ Views that Did Not Make the Cut But Might Use Later:
                 return Response(status=status.HTTP_204_NO_CONTENT)
             except Menu.DoesNotExist:
                 return Response(status=status.HTTP_404_NOT_FOUND)
+
+    class bookingView(APIView):
+        def get(self, request):
+            items = Bookings.objects.all()
+            serializer = bookingSerializer(items, many=True)
+            return Response(serializer.data)
+        
+        def post(self, request):
+            serializer = bookingSerializer(data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response({'status':'success', 'data': serializer.data})

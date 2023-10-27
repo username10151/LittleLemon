@@ -21,7 +21,7 @@ class MenuViewTest(TestCase):
         # Create an API client for making requests
         client = APIClient()
 
-        # Send a GET request to your view
+        # Send a GET request to view
         client.credentials(HTTP_AUTHORIZATION=f'Token {self.token.key}')
         response = client.get(reverse('menu-items-view'))
 
