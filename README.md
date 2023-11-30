@@ -1,30 +1,23 @@
-# littlelemon
-Back-End-Dev-Capstone
 
-If you are reviewing this please read Notes.txt - This will help you with setup!
+# Back-End-Dev-Capstone<a name="TOP"></a>
 
-When # is in url path below it stands for id number (<int:pk>)
+- <mark>If you are going to clone this please read Notes.txt - This will help you with setup!<mark>
 
-/auth - includes all the djsoer libary's paths
+* Core Concepts Learned Through This Project:
+  * Connect website back-end to MySQL
+  * Set up a Restaurant Booking API
+  * Set up a Restaurant Menu API
+  * Insert Booking and Menu data into Database via API
 
-Url Paths:
+  _# in url path below it stands for id number (<int:pk>)_
 
-/auth/token/login/
+* Url Paths:
+  * /auth - includes all the djsoer libary's paths
+  * /api/
+  * /api/api-token-auth/
+  * /api/menu-items/
+  * /api/menu-items/#
+  * /restaurant/booking/
+  * /restaurant/booking/tables/
+  * /restaurant/booking/tables/#
 
-/auth/token/logout/
-
-/auth/users/
-
-/api/
-
-/api/api-token-auth/
-
-/api/menu-items/
-
-/api/menu-items/#
-
-/restaurant/booking/
-
-/restaurant/booking/tables/
-
-/restaurant/booking/tables/#
